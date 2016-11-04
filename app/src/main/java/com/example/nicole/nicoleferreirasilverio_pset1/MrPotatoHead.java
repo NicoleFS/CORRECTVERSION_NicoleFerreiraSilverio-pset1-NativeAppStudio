@@ -13,12 +13,18 @@ public class MrPotatoHead extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mr_potato_head);
     }
+
+    // create a method for making images visible/invisible
     public void onCheckboxClicked(View view) {
-        // Is the view now checked?
+
+        // is the checkbox checked or not?
         boolean checked = ((CheckBox) view).isChecked();
 
-        // Check which checkbox was clicked
+        // check which checkbox was clicked
         switch(view.getId()) {
+
+            // for each checkbox I create an ImageView and depending on whether the checkbox is
+            // checked or not, make the image visible or invisible
             case R.id.arms:
                 ImageView arms = (ImageView)findViewById(R.id.imgarms);
                 if (checked)
